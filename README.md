@@ -1,5 +1,5 @@
 # Akane Track
-================================
+=============
 
 This a very simple proof of concept of a realtime position tracking system, using modern tecnologies like deta, fastapi, mqtt, mapbox and owntracks
 
@@ -43,7 +43,7 @@ Port: 1883
 Client ID: wherever-id
 ```
 
-Navigate to preference->connection->identification and fill device id and tracker id only.
+Navigate to p`reference->connection->identification` and fill device id and tracker id only.
 ```bash
 Username: blank
 Password: blank
@@ -79,7 +79,7 @@ Your id is:
 
 Copy the generated id and paste in `db.py`->`BaseKey = 'generated id'`
 
-Navigate to [web.deta.sh](https://web.deta.sh) in Bases tab, there will be a new data base created, called realtime (database name can be changed in `db.py`->`BASE = 'realtime'`) with a single entry (the payload we inserted with the `db_conf.py`) and there will be live our last position sended by owntracks
+Navigate to [web.deta.sh](https://web.deta.sh) in Bases tab, there will be a new data base created, called realtime (database name can be changed in `db.py`->`BASE = 'realtime'`) with a single entry (the payload we inserted with the `db_conf.py`) and there will live our last position received by owntracks
 
 Now let's use deta Micros but first install the deta CLI
 
@@ -106,9 +106,9 @@ deta new
 deta deploy
 ```
 
-Navigate to [web.deta.sh](https://web.deta.sh) in Micros tab, there will be a new micro cloud called realtime-track, inside is a link for your new service. Navigate to it and you will see the {'hola':'mundo'} output in the browser
+Navigate to [web.deta.sh](https://web.deta.sh) in Micros tab, there will be a new micro cloud called realtime-track, inside is a link for your new service. Navigate to it and you will see the `{'hola':'mundo'}` output in the browser
 
-Note that if you use a deta micros or any other provider, the `mbox.html` in template folder must be changed from `var url = 'https://localhost:8000/deta';` to `var url = 'https://domain-name/deta';`
+Note that if you use a deta micros or any other provider, the `mbox.html` in template folder must be changed from `var url = 'https://localhost:8000/deta1';` to `var url = 'https://domain-name/deta';`
 
 The `sub_client.py` must be opened all the time on your pc or in a cloud provider to listen on the topic to be able to update the database. You can use aws, gcloud or whatever but i personaly use the cheapest vps/droplet from digitalocean for my `sub_client.py` and my self hosted mqtt broker. 
 
