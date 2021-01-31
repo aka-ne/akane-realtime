@@ -43,7 +43,7 @@ Port: 1883
 Client ID: wherever-id
 ```
 
-Navigate to p`reference->connection->identification` and fill device id and tracker id only.
+Navigate to `preference->connection->identification` and fill device id and tracker id only.
 ```bash
 Username: blank
 Password: blank
