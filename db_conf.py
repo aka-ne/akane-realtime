@@ -22,13 +22,13 @@ if len(a_list) == 0:
     print('detaBase is empty')
     print('Generating key')
     id_gen = db.insert(payload)
-    print('Your key is: ')
+    print('Your id is: ')
     b_list = next(db.fetch())
     for items in b_list:
     	print(items['key'])
 
 else:
 	print('detaBase is setup')
-	print('Your key is: ')
+	print('Your id is: ')
 	for items in a_list:
 		print(items['key'])
