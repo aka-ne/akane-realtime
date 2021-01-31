@@ -1,0 +1,7 @@
+fastapi
+deta
+uvicorn
+jinja2
+aiofiles
+paho-mqtt
+tinydb
